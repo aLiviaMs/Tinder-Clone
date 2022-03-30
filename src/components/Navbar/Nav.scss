@@ -4,6 +4,11 @@ nav {
     justify-content: space-between;
     align-items: center;
 
+    .btn-login:disabled {
+        background-color: #bdb4b4;
+        color: #c12a62;
+    }
+
     .logo-container {
         width: 170px;
         margin: 15px;

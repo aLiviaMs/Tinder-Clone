@@ -1,4 +1,7 @@
 /* Button Styles */
+.cursor {
+    cursor: pointer;
+}
 .primary {
     color: #fff;
     font-style: normal;
@@ -7,12 +10,27 @@
     padding: 12px 30px;
     border-radius: 38px;
     border: none;
-    cursor: pointer;
     text-transform: uppercase;
     background: linear-gradient(45deg, #fe3072, #ff5940);
 
     &:hover {
         background: linear-gradient(268deg, #fe3072, #ff5940);
+    }
+}
+.secondary {
+    color: #797777;
+    background-color: #fff;
+    font-weight: 500;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: solid 2px #797777;
+    margin: 6px;
+
+    &:hover {
+        color: #303030;
+        border: 2px solid #303030;
     }
 }
 .nav {
