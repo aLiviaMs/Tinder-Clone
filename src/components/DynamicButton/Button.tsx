@@ -30,7 +30,7 @@ const Button: React.FC<IButtonProps> = ({
 
     return (
         <button
-            className={`ui-button ${checkButtonStyle} ${className}`}
+            className={`cursor ${checkButtonStyle} ${className}`}
             onClick={onClick}
             type={type}
             disabled={disabled}>
