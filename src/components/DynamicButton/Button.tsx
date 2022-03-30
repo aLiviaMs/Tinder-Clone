@@ -8,7 +8,7 @@ const STYLES = [
     "disabled",
 ]
 
-interface ButtonProps {
+interface IButtonProps {
     children?: string;
     type?: "button" | "submit" | "reset";
     onClick?: React.MouseEventHandler<HTMLButtonElement>;
@@ -17,7 +17,7 @@ interface ButtonProps {
     className?: string;
 }
 
-const Button: React.FC<ButtonProps> = ({
+const Button: React.FC<IButtonProps> = ({
     children,
     type,
     onClick,
