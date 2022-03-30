@@ -1,5 +1,5 @@
 /*React imports */
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 /*Components imports */
 import Button from "../components/DynamicButton/Button";
@@ -23,7 +23,6 @@ const Home = () => {
         <div className="overlay">
             <Nav
                 className="text-align-center"
-                authToken={authToken}
                 setShowModal={setShowModal}
                 showModal={showModal}
                 setIsSignUp={setIsSignUp}

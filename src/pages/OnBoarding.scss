@@ -1,0 +1,71 @@
+#onboarding {
+    form {
+        display: flex;
+        justify-content: center;
+
+        section {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            width: 35%;
+            text-align: start;
+        }
+
+        input {
+            padding: 15px 30px;
+            margin: 10px 0;
+            font-size: 15px;
+            border: solid 2px #dbdbdb;
+            border-radius: 10px;
+
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+                appearance: none;
+                margin: 0;
+            }
+
+            &[type="radio"] {
+                display: none;
+
+                &:checked+label {
+                    border: solid 2px #dd2716;
+                }
+            }
+
+            &[type="number"] {
+                width: 30%;
+            }
+
+            &[type="submit"] {
+                &:hover {
+                    background-color: #ebebeb;
+                }
+
+                &:active {
+                    background-color: #e27373;
+                }
+            }
+        }
+
+        label {
+            margin: 10px 0;
+        }
+
+        .multiple-input-container {
+            display: flex;
+            flex-direction: row;
+
+            input {
+                margin-right: 10px;
+            }
+
+            label {
+                padding: 10px;
+                border: solid 2px #909090;
+                border-radius: 10px;
+                transition: all 0.3s;
+                margin-right: 10px;
+            }
+        }
+    }
+}
