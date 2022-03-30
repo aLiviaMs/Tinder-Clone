@@ -1,19 +1,58 @@
-.close-btn {
-    cursor: pointer;
-    background: transparent;
-    border: none;
+.auth-modal {
+    position: absolute;
+    top: 50px;
+    margin: 0 auto;
+    left: 35%;
+    width: 352px;
+    height: 607px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 40px;
 
-    .close-icon {
-        border: 3px solid #e8e8e8;
-        border-radius: 20px;
-        padding: 5px;
-        transition: all 0.2s ease-in-out;
-        fill: #e8e8e8;
+    h2 {
+        margin: 35px;
+        align-items: center;
+        text-align: center;
+    }
 
-        &:hover {
-            transform: rotate(-90deg);
-            fill: #656e7b;
-            border-color: #656e7b;
+    .policy-knowledge {
+        margin-bottom: 24px;
+        text-align: center;
+    }
+
+    .close-btn {
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        float: right;
+    
+        .close-icon {
+            border: 3px solid #e8e8e8;
+            border-radius: 20px;
+            padding: 5px;
+            transition: all 0.2s ease-in-out;
+            fill: #e8e8e8;
+    
+            &:hover {
+                transform: rotate(-90deg);
+                fill: #656e7b;
+                border-color: #656e7b;
+            }
+        }
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        input {
+            padding: 8px;
+            margin: 8px;
+            font-size: 17px;
+        }  
+
+        .btn-submit {
+            margin-bottom: 30px;
         }
     }
 }
