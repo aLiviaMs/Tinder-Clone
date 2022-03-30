@@ -1,0 +1,19 @@
+.close-btn {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+
+    .close-icon {
+        border: 3px solid #e8e8e8;
+        border-radius: 20px;
+        padding: 5px;
+        transition: all 0.2s ease-in-out;
+        fill: #e8e8e8;
+
+        &:hover {
+            transform: rotate(-90deg);
+            fill: #656e7b;
+            border-color: #656e7b;
+        }
+    }
+}
