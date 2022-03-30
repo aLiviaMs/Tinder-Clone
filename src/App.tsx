@@ -2,6 +2,7 @@ import Home from "./pages/Home";
 import OnBoarding from "./pages/OnBoarding";
 import Dashboard from "./pages/Dashboard";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import './global.css';
 
 const App = () => {
   return (
