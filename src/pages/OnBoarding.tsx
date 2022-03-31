@@ -22,13 +22,19 @@ const OnBoarding = () => {
 
     }
 
-    //FIXME: Define a type and fix unchaught TypeError.
-    const handleChange = (event: any) => {
-        const value = event.target.value;
-        const name = event.taget.name;
+    /**
+     * 
+     * @param event FormEvent<HTMLInputElement>
+     * 
+     * Sets the value of a FormData field according to the name of the input that is receiving the current event.
+     */
+    const handleChange = (event: React.FormEvent<HTMLInputElement>) => {
+        const value = event.currentTarget.value;
+        const nameValue = event.currentTarget.name;
+
         setFormData((prevState) => ({
             ...prevState,
-            [name]: value
+            [nameValue]: value
         }))
     }
 
