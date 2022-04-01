@@ -6,17 +6,19 @@ import Button from '../DynamicButton/Button';
 interface INavProps {
     className?: string;
     minimal?: boolean;
-    authToken: boolean;
     setShowModal: React.Dispatch<React.SetStateAction<boolean>>;
-    showModal: boolean;
-    setIsSignUp: React.Dispatch<React.SetStateAction<boolean>>;
+    showModal?: boolean;
+    setIsSignUp?: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const Nav: React.FC<INavProps> = ({ className, minimal, authToken, setShowModal, showModal, setIsSignUp }) => {
+const Nav: React.FC<INavProps> = ({ className, minimal, setShowModal, showModal, setIsSignUp }) => {
     const handleClick = () => {
         setShowModal(true);
-        setIsSignUp(false);
+        if (setIsSignUp)
+            setIsSignUp(false);
     }
+
+    const authToken = false;
 
     return (
         <nav className={className}>
