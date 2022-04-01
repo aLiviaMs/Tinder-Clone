@@ -11,7 +11,7 @@ const OnBoarding = () => {
         dob_month: '',
         dob_year: '',
         show_gender: false,
-        genter_identity: 'man',
+        gender_identity: 'man',
         gender_interest: 'woman',
         email: '',
         url: '',
@@ -29,7 +29,7 @@ const OnBoarding = () => {
      * Sets the value of a FormData field according to the name of the input that is receiving the current event.
      */
     const handleChange = (event: React.FormEvent<HTMLInputElement>) => {
-        const value = event.currentTarget.value;
+        const value = event.currentTarget.type === 'checkbox' ? event.currentTarget.checked : event.currentTarget.value;
         const nameValue = event.currentTarget.name;
 
         setFormData((prevState) => ({
@@ -99,7 +99,7 @@ const OnBoarding = () => {
                                 name='gender_identity'
                                 value="man"
                                 onChange={handleChange}
-                                checked={false}
+                                checked={formData.gender_identity === 'man'}
                             />
                             <label htmlFor="man-gender-identity">Man</label>
                             <input
@@ -108,7 +108,7 @@ const OnBoarding = () => {
                                 name='gender_identity'
                                 value="woman"
                                 onChange={handleChange}
-                                checked={false}
+                                checked={formData.gender_identity === 'woman'}
                             />
                             <label htmlFor="woman-gender-identity">Woman</label>
                             <input
@@ -117,7 +117,7 @@ const OnBoarding = () => {
                                 name='gender_identity'
                                 value="more"
                                 onChange={handleChange}
-                                checked={false}
+                                checked={formData.gender_identity === 'more'}
                             />
                             <label htmlFor="more-gender-identity">More</label>
                         </div>
@@ -127,7 +127,7 @@ const OnBoarding = () => {
                             id='show-gender'
                             name='show_gender'
                             onChange={handleChange}
-                            checked={false}
+                            checked={formData.show_gender}
                         />
 
                         <label>Show Me</label>
@@ -138,7 +138,7 @@ const OnBoarding = () => {
                                 name='gender_interest'
                                 value="man"
                                 onChange={handleChange}
-                                checked
+                                checked={formData.gender_interest === 'man'}
                             />
                             <label htmlFor="man-gender-interest">Man</label>
                             <input
@@ -147,16 +147,16 @@ const OnBoarding = () => {
                                 name='gender_interest'
                                 value="woman"
                                 onChange={handleChange}
-                                checked={false}
+                                checked={formData.gender_interest === 'woman'}
                             />
                             <label htmlFor="woman-gender-interest">Woman</label>
                             <input
                                 type="radio"
-                                id='more-gender-interest'
+                                id='everyone-gender-interest'
                                 name='gender_interest'
-                                value="everyone"
+                                value='everyone'
                                 onChange={handleChange}
-                                checked={false}
+                                checked={formData.gender_interest === 'everyone'}
                             />
                             <label htmlFor="everyone-gender-interest">Everyone</label>
                         </div>
