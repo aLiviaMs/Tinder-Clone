@@ -1,6 +1,8 @@
 #dashboard {
+    height: 100vh;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-around;
 
     /* Card style */
     .swiper-container {
